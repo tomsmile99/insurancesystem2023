@@ -120,7 +120,7 @@ const Navbar = ({FullnamePer}) => {
                     {(_AgU === 'AGAD' || _PerPST === 'PST015' || _PerPST === 'PST019' || _PerPST === 'PST020' || _PerPST === 'PST021' || _PerPST === 'PST022' || _PerPST === 'PST023' || _PerPST === 'PST024' || _PerPST === 'PST025' ||  _PerPST === 'PST083' || _PerPST ==='PST084') && (
                       <>
                         <li className="nav-item">
-                          <NavLink to="/" className={`${location.pathname === '/' ? 'active' : ''} nav-link`}>
+                          <NavLink to="/" className={`${location.pathname === '/' || location.pathname === '/AddInsuranceForm' ? 'active' : ''} nav-link`}>
                             <i className="nav-icon fas fa-car-crash" />
                             <p>แจ้งข้อมูลประกันภัย</p>
                           </NavLink>

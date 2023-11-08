@@ -3,6 +3,7 @@ const ReadDataInsurance = () => {
   return (
     <>
       <div className="container-fluid">
+
         <div className="row mb-2">
 
           <div className="col-sm-4">
@@ -303,6 +304,7 @@ const ReadDataInsurance = () => {
 
 
         </div>
+        
       </div>{/* /.container-fluid */}
     </>
     

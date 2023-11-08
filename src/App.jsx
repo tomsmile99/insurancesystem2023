@@ -11,9 +11,10 @@ import Navbar from './layouts/includes/Navbar'
 import Footer from './layouts/includes/Footer'
 
 
-import DataInsuranceForm from "./setDefaultPages/user/DataInsuranceForm";
+import DataInsuranceForm from "./setDefaultPages/user/DataInsurance/DataInsuranceForm"; //รายการแจ้งข้อมูลประกันภัย
+import AddInsuranceForm from "./setDefaultPages/user/DataInsurance/AddInsuranceForm"; //เพิ่มรายการแจ้งข้อมูลประกันภัย
 //import DataISRs from "./setDefaultPages/admin/DataISRs";
-// import AppTest3 from "./setDefaultPages/AppTest3";
+//import AppTest3 from "./setDefaultPages/AppTest3";
 
 import { userToken } from './recoilstore/userStores';
 import { useRecoilValue } from 'recoil';
@@ -50,6 +51,7 @@ const App = () => {
                   {/* FrontEnd */}
                   <Route>
                     <Route path="/" exact={true} element={<DataInsuranceForm/>}></Route>
+                    <Route path="/AddInsuranceForm" exact={true} element={<AddInsuranceForm/>}></Route>
                     {/* <Route path="/AdminISR/DataISRs" exact={true} element={<DataISRs/>}></Route>
                     <Route path="/AppTest3" exact={true} element={<AppTest3/>}></Route> */}
                   </Route>

@@ -1,8 +1,8 @@
-export const BASE_URL_API_PATH = "http://localhost:9091/api" //localhost
-export const X_KEY_API = 'ab13a9850982d247fe65d61fda0f6160' // key local
+export const BASE_URL_API_PATH = "http://localhost/ci4_test_api01_23/api" //localhost
+export const Authorization_KEY_API = 'YWRtaW5Ac2FrZXJwLmNvbTpObWcwYUdrelMzQk5kblpHU2xsUWVtaFZkR2ROVkZWUk9IRnJPVFptVVVJPQ==' // key local
 
 // export const BASE_URL_API_PATH = "https://appncar.sakerp.org/SAKInsurance/api" // server
-// export const X_KEY_API = 'ab13a9850982d247fe65d61fda0f6159' // server
+// export const Authorization_KEY_API = 'YWRtaW5Ac2FrZXJwLmNvbTpObWcwYUdrelMzQk5kblpHU2xsUWVtaFZkR2ROVkZWUk9IRnJPVFptVVVJPQ==' // server
 
 
 

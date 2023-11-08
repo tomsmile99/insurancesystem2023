@@ -42,5 +42,10 @@ table tbody tr td {
   font-size: 10pt;
 }
 
-
+.fb{
+  font-weight: bold;
+}
+.textRed {
+  color: red;
+}
 
