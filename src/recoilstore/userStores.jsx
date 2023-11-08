@@ -16,10 +16,10 @@ if(itemUserToken == null){
   })
 }
 
-const userToken_AgU      = (encryptStorage.getMultipleItems(['userToken'])).userToken._AgU
-const userToken_PerD      = (encryptStorage.getMultipleItems(['userToken'])).userToken._PerD
-const userToken_PerTiNa   = (encryptStorage.getMultipleItems(['userToken'])).userToken._PerTiNa
-const userToken_PerFuNas  = (encryptStorage.getMultipleItems(['userToken'])).userToken._PerFuNa
+const _userToken_AgU      = (encryptStorage.getMultipleItems(['userToken'])).userToken._AgU
+const _userToken_PerD      = (encryptStorage.getMultipleItems(['userToken'])).userToken._PerD
+const _userToken_PerTiNa   = (encryptStorage.getMultipleItems(['userToken'])).userToken._PerTiNa
+const _userToken_PerFuNas  = (encryptStorage.getMultipleItems(['userToken'])).userToken._PerFuNa
 const _userToken_PerST    = (encryptStorage.getMultipleItems(['userToken'])).userToken._PerST
 const _userToken_PerPST   = (encryptStorage.getMultipleItems(['userToken'])).userToken._PerPST
 const _userToken_PerPST_LV   = (encryptStorage.getMultipleItems(['userToken'])).userToken._PerPST_LV
@@ -38,10 +38,10 @@ const _userToken_PerLast_Login    = (encryptStorage.getMultipleItems(['userToken
 
 // eslint-disable-next-line react-refresh/only-export-components
 const UserDetail = {
-  AgU       : userToken_AgU, //AcGU_Group
-  PerD      : userToken_PerD, //รหัสพนักงาน
-  PerTiNa   : userToken_PerTiNa, //คำนำหน้าชื่อ
-  PerFuNas  : userToken_PerFuNas, //ชื่อ-นามสกุลพนักงาน
+  AgU       : _userToken_AgU, //AcGU_Group
+  PerD      : _userToken_PerD, //รหัสพนักงาน
+  PerTiNa   : _userToken_PerTiNa, //คำนำหน้าชื่อ
+  PerFuNas  : _userToken_PerFuNas, //ชื่อ-นามสกุลพนักงาน
   PerST     : _userToken_PerST, //สถานะ User
   PerPST    : _userToken_PerPST, //Code ตำแหน่ง
   PerPST_N  : _userToken_PerPST_N, //ชื่อ ตำแหน่ง

@@ -13,6 +13,7 @@
     "axios": "^1.6.0",
     "date-fns": "^2.30.0",
     "encrypt-storage": "^2.12.19",
+    "jquery": "^3.7.1",
     "js-base64": "^3.7.5",
     "moment": "^2.29.4",
     "react": "^18.2.0",

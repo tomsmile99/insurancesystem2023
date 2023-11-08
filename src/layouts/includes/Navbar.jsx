@@ -1,10 +1,20 @@
-
 import { NavLink, useLocation } from 'react-router-dom';
 // import {encryptStorage} from '../../security/EncryptStorage'
+
+
+import { Base64 } from "js-base64";
+import { userToken } from '../../recoilstore/userStores';
+import { useRecoilValue } from 'recoil';
+
 
 const Navbar = ({FullnamePer}) => {
   let location = useLocation();
   
+  const getstore = useRecoilValue(userToken)
+  const _AgU = Base64.decode(getstore.AgU)
+  const _PerPST = Base64.decode(getstore.PerPST)
+  const _PerWP = Base64.decode(getstore.PerWP)
+
   return (
     <>
       <aside className="main-sidebar elevation-4 sidebar-light-primary">
@@ -77,7 +87,7 @@ const Navbar = ({FullnamePer}) => {
                       </a>
                     </li>
                     <li className="nav-header">เมนูการจัดการ</li>
-                    <li className={`${location.pathname === '/' || location.pathname === '/AppTest2' ? 'menu-open' : ''} nav-item`}>
+                    {/* <li className={`${location.pathname === '/' || location.pathname === '/AppTest2' ? 'menu-open' : ''} nav-item`}>
                       <a href="#" className={`${location.pathname === '/' || location.pathname === '/AppTest2' ? 'active' : ''} nav-link`}>
                         <i className="nav-icon fas fa-tachometer-alt" />
                         <p>
@@ -105,14 +115,53 @@ const Navbar = ({FullnamePer}) => {
                         <i className="nav-icon fas fa-clipboard-list" />
                         <p>แจ้งเลขที่ใบเสร็จ 3</p>
                       </NavLink>
-                    </li>
-
-                    {/* <li className="nav-item">
-                      <NavLink to="/" className={`${location.pathname === '/' ? 'active' : ''} nav-link`}>
-                        <i className="nav-icon fas fa-clipboard-list" />
-                        <p>แจ้งข้อมูลประกันภัย</p>
-                      </NavLink>
                     </li> */}
+
+                    {(_AgU === 'AGAD' || _PerPST === 'PST015' || _PerPST === 'PST019' || _PerPST === 'PST020' || _PerPST === 'PST021' || _PerPST === 'PST022' || _PerPST === 'PST023' || _PerPST === 'PST024' || _PerPST === 'PST025' ||  _PerPST === 'PST083' || _PerPST ==='PST084') && (
+                      <>
+                        <li className="nav-item">
+                          <NavLink to="/" className={`${location.pathname === '/' ? 'active' : ''} nav-link`}>
+                            <i className="nav-icon fas fa-car-crash" />
+                            <p>แจ้งข้อมูลประกันภัย</p>
+                          </NavLink>
+                        </li>
+                      </>
+                    )}
+                    {(_AgU === 'AGAD' || _PerWP === 'WP0013') && (
+                      <>
+                        <li className="nav-header">เมนูสำหรับเจ้าหน้าที่</li>
+                          <li className="nav-item">
+                            <NavLink to="/AdminISR/DataISRs" className={`${location.pathname === '/AdminISR/DataISRs' ? 'active' : ''} nav-link`}>
+                              <i className="nav-icon fas fa-inbox"/>
+                              <p>
+                                รายการแจ้งทำประกันภัย <span style={{fontSize: 10}} className="badge badge-danger">200</span>
+                              </p>
+                            </NavLink>
+                          </li>
+                      </>
+                    )}
+                    <li className="nav-header">รายงาน</li>
+                    {(_AgU === 'AGAD' || _PerPST === 'PST015' || _PerPST === 'PST019' || _PerPST === 'PST020' || _PerPST === 'PST021' || _PerPST === 'PST022' || _PerPST === 'PST023' || _PerPST === 'PST024' || _PerPST === 'PST025' ||  _PerPST === 'PST083' || _PerPST ==='PST084') && (
+                      <>
+                        <li className="nav-item">
+                          <NavLink to="/report" className={`${location.pathname === '/report' ? 'active' : ''} nav-link`}>
+                            <i className="nav-icon fas fa-chart-bar"/>
+                            <p>รายงานสรุปการขายประกันภัย</p>
+                          </NavLink>
+                        </li>
+                      </>
+                    )}
+
+                    {(_AgU === 'AGAD' || _PerWP === 'WP0013' || _PerPST === 'PST003' || _PerPST === 'PST007' || _PerPST === 'PST009' || _PerPST === 'PST010' || _PerPST === 'PST011' || _PerPST === 'PST012' || _PerPST === 'PST013' || _PerPST === 'PST014') && (
+                      <>
+                        <li className="nav-item">
+                          <NavLink to="/AdminISR/report" className={`${location.pathname === '/AdminISR/report' ? 'active' : ''} nav-link`}>
+                            <i className="nav-icon fas fa-chart-bar"/>
+                            <p>รายงานสรุปการขายประกันภัย</p>
+                          </NavLink>
+                        </li>
+                      </>
+                    )}
                   </ul>
                 </nav>
                 {/* /.sidebar-menu */}
